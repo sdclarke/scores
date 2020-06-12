@@ -9,9 +9,13 @@ service Scorer {
 }
 
 message UpdateScoresRequest {
-  map<string, int32> scores = 1;
+  map<string, double> scores = 1;
+  string turn = 2;
 }
 
 message UpdateScoresResponse {
   bool success = 1;
+  map<string, double> mean_scores = 2;
+  map<string, double> median_scores = 3;
+  map<string, double> maximum_scores = 4;
 }

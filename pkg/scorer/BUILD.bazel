@@ -3,10 +3,12 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "go_default_library",
     srcs = [
+        "maximum_scorer.go",
         "mean_scorer.go",
+        "median_scorer.go",
         "scorer.go",
     ],
-    importpath = "github.com/buildbarn/bb-remote-execution/pkg/scorer",
+    importpath = "github.com/sdclarke/scores/pkg/scorer",
     visibility = ["//visibility:public"],
     deps = ["//pkg/proto/scoreupdate:go_default_library"],
 )

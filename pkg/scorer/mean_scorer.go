@@ -7,19 +7,26 @@ import (
 )
 
 type meanScorer struct {
-	scores map[string]int
+	scores map[string]float64
 }
 
-func NewMeanScorer(teams []string) Scorer {
-	scores := make(map[string]int)
-	for _, name := range teams {
-		scores[name] = 0
-	}
+func NewMeanScorer() Scorer {
+	scores := make(map[string]float64)
 	return &meanScorer{
 		scores: scores,
 	}
 }
 
-func (ms *meanScorer) UpdateScores(ctx context.Context, request *scoreupdate.UpdateScoreRequest) (*scoreupdate.UpdateScoresResponse, error) {
-	return nil, nil
+func (ms *meanScorer) UpdateScores(ctx context.Context, request *scoreupdate.UpdateScoresRequest) (*scoreupdate.UpdateScoresResponse, error) {
+	total := float64(0)
+	for name, value := range request.Scores {
+		ms.scores[name] += value
+		total += value
+	}
+	mean := total / float64(len(request.Scores))
+	ms.scores[request.Turn] += mean
+	return &scoreupdate.UpdateScoresResponse{
+		Success:    true,
+		MeanScores: ms.scores,
+	}, nil
 }
