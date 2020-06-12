@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package scores.scoreupdate;
+
+option go_package = "github.com/sdclarke/scores/pkg/proto/scoreupdate";
+
+service Scorer {
+  rpc UpdateScores(UpdateScoresRequest) returns (UpdateScoresResponse);
+}
+
+message UpdateScoresRequest {
+  map<string, int32> scores = 1;
+}
+
+message UpdateScoresResponse {
+  bool success = 1;
+}
