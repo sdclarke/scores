@@ -6,6 +6,7 @@ import scores from '../../assets/scores.json';
   templateUrl: './scoreboard.component.html',
   styleUrls: ['./scoreboard.component.css']
 })
+
 export class ScoreboardComponent implements OnInit {
 
   medianScores = [];
