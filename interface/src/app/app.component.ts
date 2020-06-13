@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'interface';
+
+  constructor() {
+    console.log('BANANAAA');
+  }
 }
