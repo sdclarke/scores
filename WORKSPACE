@@ -88,3 +88,15 @@ container_repositories()
 load("@io_bazel_rules_docker//go:image.bzl", _go_image_repos = "repositories")
 
 _go_image_repos()
+
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
+    name = "com_github_buildbarn_bb_storage",
+    commit = "ad94fa646ea6f2bf59a355585e6d94d81e353c53",
+    remote = "https://github.com/buildbarn/bb-storage.git",
+)
+
+load(":go_dependencies_bb_storage.bzl", "bb_storage_go_dependencies")
+
+bb_storage_go_dependencies()

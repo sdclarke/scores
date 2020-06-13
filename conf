@@ -1,0 +1,11 @@
+{
+  address: "localhost:8080",
+  scores: {
+    "scott&snow": 9,
+    "g&g": 2,
+    "andy&laikuen": 6,
+    "dave&sue": 7,
+    "steve": 7.5,
+  },
+  turn: "mum&dad",
+}

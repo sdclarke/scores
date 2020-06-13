@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package configuration.client;
+
+option go_package = "github.com/sdclarke/scores/pkg/proto/configuration";
+
+message ClientConfiguration {
+  string address = 1;
+  map<string, double> scores = 2;
+  string turn = 3;
+}
