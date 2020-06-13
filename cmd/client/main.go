@@ -45,10 +45,6 @@ func main() {
 
 	fmt.Printf("\nMaximum Scores:\n")
 	printScores(response.MaximumScores)
-
-	// log.Printf("Mean Scores: %#v", response.MeanScores)
-	// log.Printf("Median Scores: %#v", response.MedianScores)
-	// log.Printf("Maximum Scores: %#v", response.MaximumScores)
 }
 
 func printScores(m map[string]float64) {
