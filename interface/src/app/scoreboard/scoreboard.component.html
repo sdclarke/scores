@@ -1,0 +1,36 @@
+
+<h1>Mean Scores</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor="let item of meanScores">
+                {{ item.key }} - {{ item.value }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h1>Median Scores</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor="let item of medianScores">
+                {{ item.key }} - {{ item.value }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h1>Max Scores</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor="let item of maxScores">
+                {{ item.key }} - {{ item.value }}
+            </li>
+        </ul>
+    </div>
+</div>
