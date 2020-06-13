@@ -1,19 +1,5 @@
 {
-    "median": [
-        { "name": "snow", "score": 7},
-        { "name": "scott", "score": 5},
-        { "name": "max", "score": 3}
-    ],
-
-    "mean": [
-        { "name": "snow", "score": 9},
-        { "name": "scott", "score": 6},
-        { "name": "mary", "score": 1}
-    ],
-
-    "maximum": [
-        { "name": "snow", "score": 3},
-        { "name": "scott", "score": 2},
-        { "name": "lol", "score": 0}
-    ]
+	"mean": [],
+	"median": [],
+	"maximum": []
 }
