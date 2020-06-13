@@ -1,0 +1,73 @@
+.maindiv {
+    column-count: 3;
+    column-gap: 40px;
+    margin-top:0px;
+    height: auto;
+}
+
+.font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+div.maindiv h1 {
+    margin-top:0px;
+    background-color: aquamarine;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid #ddd;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+
+li:last-child {
+    margin-bottom: 0px;
+}
+
+ol {
+    padding: 1px;  
+    padding-left: 38px;
+}
+
+#tableCSS {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#tableCSS td, #tableCSS th {
+    border: 1px solid #ddd;
+    padding: 22px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+#tableCSS tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+  
+#tableCSS tr:hover {
+    background-color: #ddd;
+}
+  
+#tableCSS th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: center;
+    background-color: aquamarine;
+    color: black;
+}
+
+#tableCSS .scoringNumber {
+    background-color: rgb(241, 208, 16);
+}
+
+#tableCSS .scoringNumber:hover {
+    background-color: darkgoldenrod;
+}
+
