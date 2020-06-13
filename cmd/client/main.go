@@ -71,6 +71,16 @@ func main() {
 		maximumScores = append(maximumScores, scoreMap{Name: k, Score: v})
 	}
 
+	sort.Slice(meanScores, func(i, j int) bool {
+		return meanScores[i].Score > meanScores[j].Score
+	})
+	sort.Slice(medianScores, func(i, j int) bool {
+		return medianScores[i].Score > medianScores[j].Score
+	})
+	sort.Slice(maximumScores, func(i, j int) bool {
+		return maximumScores[i].Score > maximumScores[j].Score
+	})
+
 	scores := scoresJson{
 		Mean:    meanScores,
 		Median:  medianScores,
