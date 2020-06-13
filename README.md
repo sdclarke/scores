@@ -12,3 +12,31 @@ as using the median or mean score of the other teams.
 
 This repo provides a client/server system which allows for tracking of
 scores according to each of the metrics mentioned above.
+
+## Building
+To build the server
+```
+bazel build //cmd/scores:scores
+```
+
+To build the client
+```
+bazel build //cmd/client:client
+```
+
+## Running
+
+To run the server normally
+```
+bazel run //cmd/scores:scores
+```
+
+To run the server in a docker container
+```
+bazel run //cmd/scores:scores_container
+```
+
+To run the client
+```
+bazel run //cmd/client:client
+```
